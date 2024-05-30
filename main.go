@@ -135,7 +135,9 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "ا�
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 
 
-								
+								res1 := strings.SplitAfter(myconfigs[i], "#")
+								myconfigs[i] = strings.ReplaceAll(myconfigs[i], res1 , "Connect")
+									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
 										if proto_regex == "ss" {
