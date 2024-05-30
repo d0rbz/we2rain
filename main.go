@@ -135,11 +135,14 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "ا�
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
 
-									
+								mytgid := strings.SplitAfter(lines[a], "#")
+								for i := 0; i < len(mytgid); i++ {
+								if mytgid[i] != "" {
+									re := regexp.MustCompile(regex_value)	
+
+								myconfigs[i] = strings.ReplaceAll(mytgid, "" , "Connect")
 
 
-								res1 := strings.SplitAfter(myconfigs[i], "#")
-								myconfigs[i] = strings.ReplaceAll(res1, "" , "Connect")
 									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
