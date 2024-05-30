@@ -41,6 +41,18 @@ func main() {
 		"vless":  `vless:\/\/`,
 	}
 
+
+	res1 := map[string]string{
+		"ss":      "",
+		"vmess":   "",
+		"trojan":  "",
+		"vless":   "",
+	}
+
+
+
+
+	
 	//protocol := ""
 	for i := 0; i < len(channels); i++ {
 		all_messages := false
@@ -136,8 +148,8 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
 
 
-									res1[vb] := strings.SplitAfter( lines[a] , "#")
-										 delete(res1[vb] , "")
+									res1 := strings.SplitAfter( configs , "#")
+										 delete(res1 , "")
 									
 									
 									match := re.FindStringSubmatch(myconfigs[i])
