@@ -197,6 +197,21 @@ func load_more(link string) *goquery.Document {
 	return doc
 }
 
+
+package main
+
+import (
+    "fmt"
+    "strings"
+)
+
+func main() {
+    string
+    replaced := strings.Replace(str, "?after=", "apolotest", 1)
+    fmt.Println(replaced)
+}
+
+
 func GetMessages(length int, doc *goquery.Document, number string, channel string) *goquery.Document {
 	x := load_more(channel + "?before=" + number)
 
