@@ -122,7 +122,8 @@ func main() {
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
-									myconfigs[i] = strings.ReplaceAll(myconfigs[i], "+=\n", "اتصال")
+									myconfigs[i] = strings.ReplaceAll(myconfigs[i], regex , "اتصال")
+
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
 										if proto_regex == "ss" {
