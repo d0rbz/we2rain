@@ -75,17 +75,17 @@ func main() {
 			doc.Find(".tgme_widget_message_text").Each(func(j int, s *goquery.Selection) {
 				// For each item found, get the band and title
 				message_text := s.Text()
-				lines := strings.Split(message_text, "\n")
+				lines := strings.Split(message_text, "#?after")
 				for a := 0; a < len(lines); a++ {
 					for _, regex_value := range myregex {
 						re := regexp.MustCompile(regex_value)
 						lines[a] = re.ReplaceAllStringFunc(lines[a], func(match string) string {
-							return "\n" + match
+							return "#?after" + match
 						})
 					}
 					for proto, _ := range configs {
 						if strings.Contains(lines[a], proto) {
-							configs["mixed"] += "\n" + lines[a] + "\n"
+							configs["mixed"] += "#?after" + lines[a] + "#?after"
 						}
 					}
 				}
@@ -102,19 +102,19 @@ func main() {
 						lines[a] = re.ReplaceAllStringFunc(lines[a], func(match string) string {
 							if proto_regex == "ss" {
 								if match[:3] == "vme" {
-									return "\n" + match
+									return "#?after" + match
 								} else if match[:3] == "vle" {
-									return "\n" + match
+									return "#?after" + match
 								} else {
-									return "\n" + match
+									return "#?after" + match
 								}
 							} else {
-								return "\n" + match
+								return "#?after" + match
 							}
 						})
 
-						if len(strings.Split(lines[a], "\n")) > 1 {
-							myconfigs := strings.Split(lines[a], "\n")
+						if len(strings.Split(lines[a], "#?after")) > 1 {
+							myconfigs := strings.Split(lines[a], "#?after")
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
@@ -123,14 +123,14 @@ func main() {
 									if len(match) >= 1 {
 										if proto_regex == "ss" {
 											if match[1][:3] == "vme" {
-												configs[""] += "\n" + myconfigs[i] + "\n"
+												configs[""] += "#?after" + myconfigs[i] + "#?after"
 											} else if match[1][:3] == "vle" {
-												configs[""] += "\n" + myconfigs[i] + "\n"
+												configs[""] += "#?after" + myconfigs[i] + "#?after"
 											} else {
-												configs[""] += "\n" + myconfigs[i][3:] + "\n"
+												configs[""] += "\#?after" + myconfigs[i][3:] + "#?after"
 											}
 										} else {
-											configs[proto_regex] += "\n" + myconfigs[i] + "\n"
+											configs[proto_regex] += "#?after" + myconfigs[i] + "#?after"
 										}
 									}
 
@@ -260,7 +260,7 @@ func RemoveDuplicate(config string) string {
 	}
 
 	// Join unique lines into a string
-	uniqueString := strings.Join(getKeys(uniqueLines), "\n")
+	uniqueString := strings.Join(getKeys(uniqueLines), "#?after")
 
 	return uniqueString
 }
