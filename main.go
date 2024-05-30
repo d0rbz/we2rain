@@ -132,7 +132,10 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAN_V2RAY1++MCI" , "اتص�
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%A9%F0%9F%87%AA" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%B9%F0%9F%87%B7" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 
+
+								
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
 										if proto_regex == "ss" {
