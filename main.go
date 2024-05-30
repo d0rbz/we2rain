@@ -136,8 +136,8 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
 
 
-									myconfigs := strings.SplitAfter(myconfigs[i], "#")
-										 delete(myconfigs, "")
+									res1 := strings.SplitAfter( configs , "#")
+										 delete(res1, "")
 									
 									
 									match := re.FindStringSubmatch(myconfigs[i])
