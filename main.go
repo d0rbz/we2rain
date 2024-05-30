@@ -128,7 +128,7 @@ func main() {
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
-								myconfigs[i] = strings.Split(myconfigs[i], "#")
+								myconfigs[i] = strings.Split(lines[a], "#")
 								
 										
 
