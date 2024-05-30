@@ -67,11 +67,11 @@ func main() {
 
 		messages := doc.Find(".tgme_widget_message_wrap").Length()
 		link, exist := doc.Find(".tgme_widget_message_wrap .js-widget_message").Last().Attr("data-post")
-		if messages < 20 && exist {
+		if messages < 15 && exist {
 			number := strings.Split(link, "/")[1]
 			fmt.Println(number)
 
-			doc = GetMessages(20, doc, number, channels[i])
+			doc = GetMessages(15, doc, number, channels[i])
 		}
 
 		if all_messages {
@@ -122,7 +122,16 @@ func main() {
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
-									myconfigs[i] = strings.ReplaceAll(myconfigs[i], regex_value , "اتصال")
+									myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAn_V2Ray1" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MKH V2rayngn" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "🔥@Alfred_Config" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "@ALL V2rayngnکانفیگ مخصوص مخابرات" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40v2rayngvpn" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAN_V2RAY1++%7C+MCI" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAN_V2RAY1++MCI" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%A9%F0%9F%87%AA" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%B9%F0%9F%87%B7" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "اتصال")
 
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
