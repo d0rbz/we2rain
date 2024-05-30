@@ -129,9 +129,10 @@ func main() {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
 								
-									myconfigs[i] = strings.TrimRight(myconfigs[i], "#")
-									myconfigs[i] = strings.TrimRight(lines[a], "#")	
-									myconfigs[i] = strings.TrimRight(configs, "#")	
+									myconfigs[i] = 	trimStringFromDot(myconfigs[i] string) string {
+  										  if idx := strings.Index(myconfigs[i], "#"); idx != -1 {
+        									return myconfigs[i][:idx]
+ 									   }
 								
 										
 
