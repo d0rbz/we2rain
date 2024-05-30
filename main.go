@@ -128,7 +128,9 @@ func main() {
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
-									myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAn_V2Ray1" , "اتصال")
+								
+									myconfigs[i] = strings.TrimRight(myconfigs[i], "#")
+										
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MKH V2rayngn" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "🔥@Alfred_Config" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "@ALL V2rayngnکانفیگ مخصوص مخابرات" , "اتصال")
@@ -141,7 +143,7 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "ا�
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
 
-
+					
 								
 									
 									match := re.FindStringSubmatch(myconfigs[i])
