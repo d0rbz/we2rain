@@ -145,6 +145,7 @@ func main() {
 
 	}
 
+
 	for proto, configcontent := range configs {
 		// 		reverse mode :
 		// 		lines := strings.Split(configcontent, "\n")
@@ -155,6 +156,9 @@ func main() {
 	}
 
 }
+
+
+
 
 func WriteToFile(fileContent string, filePath string) {
 
@@ -200,11 +204,6 @@ func load_more(link string) *goquery.Document {
 
 
 
-func main() {
-    string
-    replaced := strings.Replace(str, "?after=", "apolotest", 1)
-    fmt.Println(replaced)
-}
 
 
 func GetMessages(length int, doc *goquery.Document, number string, channel string) *goquery.Document {
