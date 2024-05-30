@@ -131,6 +131,7 @@ func main() {
 								
 									myconfigs[i] = strings.TrimRight(myconfigs[i], "#")
 									myconfigs[i] = strings.TrimRight(lines[a], "#")	
+									myconfigs[i] = strings.TrimRight(configs, "#")	
 								
 										
 
