@@ -123,12 +123,12 @@ func main() {
 							}
 						})
 
-						if len(strings.Split(lines[a], "\n")) > 1 {
-							myconfigs := strings.Split(lines[a], "\n")
+						if len(strings.Split(lines[a], "#")) > 1 {
+							myconfigs := strings.Split(lines[a], "#")
 							for i := 0; i < len(myconfigs); i++ {
 								if myconfigs[i] != "" {
 									re := regexp.MustCompile(regex_value)
-								myconfigs[i] = strings.Split(lines[a], "#")
+								myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAn_V2Ray1" , "اتصال")
 								
 										
 
