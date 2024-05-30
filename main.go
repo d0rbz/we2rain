@@ -198,12 +198,7 @@ func load_more(link string) *goquery.Document {
 }
 
 
-package main
 
-import (
-    "fmt"
-    "strings"
-)
 
 func main() {
     string
