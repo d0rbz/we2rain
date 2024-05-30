@@ -42,12 +42,6 @@ func main() {
 	}
 
 
-	res1 := map[string]string{
-		"ss":      "",
-		"vmess":   "",
-		"trojan":  "",
-		"vless":   "",
-	}
 
 
 
@@ -148,9 +142,7 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
 
 
-									res1 := strings.SplitAfter( configs , "#")
-										 delete(res1 , "")
-									
+								
 									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
