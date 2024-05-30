@@ -130,21 +130,11 @@ func main() {
 									re := regexp.MustCompile(regex_value)
 								
 									myconfigs[i] = strings.TrimRight(myconfigs[i], "#")
-										
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MKH V2rayngn" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "🔥@Alfred_Config" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "@ALL V2rayngnکانفیگ مخصوص مخابرات" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40v2rayngvpn" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAN_V2RAY1++%7C+MCI" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IRAN_V2RAY1++MCI" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%A9%F0%9F%87%AA" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%B9%F0%9F%87%B7" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
-myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
-
-					
+									myconfigs[i] = strings.TrimRight(lines[a], "#")	
 								
+										
+
+				
 									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
