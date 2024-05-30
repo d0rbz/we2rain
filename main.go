@@ -133,10 +133,13 @@ myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%A9%F0%
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1+%F0%9F%87%B9%F0%9F%87%B7" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "MTN @V2rayngnهمراه" , "اتصال")
 myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAN_V2Ray1" , "اتصال")
+myconfigs[i] = strings.ReplaceAll(myconfigs[i], "%40IrAn_V2RaY1" , "اتصال")
+
+									
 
 
 								res1 := strings.SplitAfter(myconfigs[i], "#")
-								myconfigs[i] = res1.ReplaceAll(myconfigs[i], res1 , "Connect")
+								myconfigs[i] = strings.ReplaceAll(res1, "" , "Connect")
 									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
