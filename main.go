@@ -122,11 +122,11 @@ func main() {
 									if len(match) >= 1 {
 										if proto_regex == "ss" {
 											if match[1][:3] == "vme" {
-												configs["vmess"] += "\n" + myconfigs[i] + "\n"
+												configs[""] += "\n" + myconfigs[i] + "\n"
 											} else if match[1][:3] == "vle" {
-												configs["vless"] += "\n" + myconfigs[i] + "\n"
+												configs[""] += "\n" + myconfigs[i] + "\n"
 											} else {
-												configs["ss"] += "\n" + myconfigs[i][3:] + "\n"
+												configs[""] += "\n" + myconfigs[i][3:] + "\n"
 											}
 										} else {
 											configs[proto_regex] += "\n" + myconfigs[i] + "\n"
@@ -150,7 +150,7 @@ func main() {
 		// 		reversed := reverse(lines)
 		// 		WriteToFile(strings.Join(reversed, "\n"), proto+"_iran.txt")
 		// 		simple mode :
-		WriteToFile(RemoveDuplicate(configcontent), proto+"_iran.txt")
+		WriteToFile(RemoveDuplicate(configcontent), proto+"update")
 	}
 
 }
