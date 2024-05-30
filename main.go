@@ -152,7 +152,7 @@ func main() {
 		// 		reversed := reverse(lines)
 		// 		WriteToFile(strings.Join(reversed, "\n"), proto+"_iran.txt")
 		// 		simple mode :
-		WriteToFile(RemoveDuplicate(configcontent), proto+"update")
+		WriteToFile(strings.Join(reversed, "\n"), proto+"update")
 	}
 
 }
