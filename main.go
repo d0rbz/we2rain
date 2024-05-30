@@ -19,6 +19,8 @@ func main() {
 
 	channels := []string{
 		"https://t.me/s/we2rain",
+		"https://t.me/s/we2rain",
+		"https://t.me/s/we2rain",
 	}
 
 	configs := map[string]string{
@@ -62,11 +64,11 @@ func main() {
 
 		messages := doc.Find(".tgme_widget_message_wrap").Length()
 		link, exist := doc.Find(".tgme_widget_message_wrap .js-widget_message").Last().Attr("data-post")
-		if messages < 100 && exist {
+		if messages < 1000 && exist {
 			number := strings.Split(link, "/")[1]
 			fmt.Println(number)
 
-			doc = GetMessages(100, doc, number, channels[i])
+			doc = GetMessages(1000, doc, number, channels[i])
 		}
 
 		if all_messages {
