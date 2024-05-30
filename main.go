@@ -72,7 +72,7 @@ func main() {
 
 		if all_messages {
 			fmt.Println(doc.Find(".js-widget_message_wrap").Length())
-			doc.Find("apolo1").Each(func(j int, s *goquery.Selection) {
+			doc.Find(".tgme_widget_message_text").Each(func(j int, s *goquery.Selection) {
 				// For each item found, get the band and title
 				message_text := s.Text()
 				lines := strings.Split(message_text, "\n")
@@ -92,7 +92,7 @@ func main() {
 
 			})
 		} else {
-			doc.Find("apolo2").Each(func(j int, s *goquery.Selection) {
+			doc.Find("code,pre").Each(func(j int, s *goquery.Selection) {
 				// For each item found, get the band and title
 				message_text := s.Text()
 				lines := strings.Split(message_text, "\n")
