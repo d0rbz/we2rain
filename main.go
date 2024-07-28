@@ -25,6 +25,7 @@ func main() {
 		"https://t.me/s/Alfred_Config",
 		"https://t.me/s/freakConfig",
 		"https://t.me/s/v2ray_Alpha",
+		"https://t.me/s/v2ray_configs_pool",
 
 	}
 
