@@ -23,6 +23,8 @@ func main() {
 		"https://t.me/s/iran_v2ray1",
 		"https://t.me/s/v2rayngn",
 		"https://t.me/s/Alfred_Config",
+		"https://t.me/s/freakConfig",
+		"https://t.me/s/v2ray_Alpha",
 
 	}
 
