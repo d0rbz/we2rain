@@ -32,7 +32,7 @@ func main() {
 	}
 
 	configs := map[string]string{
-	
+		"":     "",
 		"vmess":  "",
 		"trojan": "",
 		"vless":  "",
@@ -40,7 +40,7 @@ func main() {
 	}
 
 	myregex := map[string]string{
-		
+		"":     `(.{3})ss:\/\/`,
 		"vmess":  `vmess:\/\/`,
 		"trojan": `trojan:\/\/`,
 		"vless":  `vless:\/\/`,
@@ -115,7 +115,7 @@ func main() {
 					for proto_regex, regex_value := range myregex {
 						re := regexp.MustCompile(regex_value)
 						lines[a] = re.ReplaceAllStringFunc(lines[a], func(match string) string {
-							if proto_regex == "ss" {
+							if proto_regex == "" {
 								if match[:3] == "vme" {
 									return "\n" + match
 								} else if match[:3] == "vle" {
@@ -140,7 +140,7 @@ func main() {
 									
 									match := re.FindStringSubmatch(myconfigs[i])
 									if len(match) >= 1 {
-										if proto_regex == "ss" {
+										if proto_regex == "" {
 											if match[1][:3] == "vme" {
 												configs[""] += "\n" + myconfigs[i] + "\n"
 											} else if match[1][:3] == "vle" {
