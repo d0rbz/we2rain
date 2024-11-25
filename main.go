@@ -28,6 +28,10 @@ func main() {
 		"https://t.me/s/v2ray_configs_pool",
 		"https://t.me/vpnfail_v2ray",
 		"https://t.me/ConfigsHUB",
+		"https://t.me/VlessVpnFree",
+		"https://t.me/vpnfail_vless",
+		"https://t.me/ev2rayy",
+		"https://t.me/DailyV2RY",
 
 	}
 
@@ -78,11 +82,11 @@ func main() {
 
 		messages := doc.Find(".tgme_widget_message_wrap").Length()
 		link, exist := doc.Find(".tgme_widget_message_wrap .js-widget_message").Last().Attr("data-post")
-		if messages < 30 && exist {
+		if messages < 50 && exist {
 			number := strings.Split(link, "/")[1]
 			fmt.Println(number)
 
-			doc = GetMessages(30, doc, number, channels[i])
+			doc = GetMessages(50, doc, number, channels[i])
 		}
 
 		if all_messages {
