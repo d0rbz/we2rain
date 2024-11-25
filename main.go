@@ -26,11 +26,13 @@ func main() {
 		"https://t.me/s/freakConfig",
 		"https://t.me/s/v2ray_Alpha",
 		"https://t.me/s/v2ray_configs_pool",
+		"https://t.me/vpnfail_v2ray",
+		"https://t.me/ConfigsHUB",
 
 	}
 
 	configs := map[string]string{
-		"ss":     "",
+	
 		"vmess":  "",
 		"trojan": "",
 		"vless":  "",
@@ -38,7 +40,7 @@ func main() {
 	}
 
 	myregex := map[string]string{
-		"ss":     `(.{3})ss:\/\/`,
+		
 		"vmess":  `vmess:\/\/`,
 		"trojan": `trojan:\/\/`,
 		"vless":  `vless:\/\/`,
