@@ -34,7 +34,7 @@ func main() {
 		"https://t.me/DailyV2RY",
 		"https://t.me/IP_CF_Config",
 		"https://t.me/BigSmoke_Config",
-		"https://t.me/v2ray_free_conf",
+		"https://t.me/configMs",
 
 	}
 
