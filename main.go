@@ -85,7 +85,7 @@ func main() {
 
 		messages := doc.Find(".tgme_widget_message_wrap").Length()
 		link, exist := doc.Find(".tgme_widget_message_wrap .js-widget_message").Last().Attr("data-post")
-		if messages < 100 && exist {
+		if messages < 30 && exist {
 			number := strings.Split(link, "/")[1]
 			fmt.Println(number)
 
