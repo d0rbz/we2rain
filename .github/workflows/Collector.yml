@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: "*/100 * * * *"
+    - cron: "*/20 * * * *"
 
 jobs:
   build:
