@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
   
   schedule:
-    - cron: "*/300 * * * *"
-
+    - cron: "*/3 2 * * *"
+    
 jobs:
   build:
     runs-on: ubuntu-latest
