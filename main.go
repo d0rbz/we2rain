@@ -623,7 +623,8 @@ func main() {
 		"https://t.me/s/shh_proxy",
 		"https://t.me/s/forwardv2ray",
 		"https://t.me/s/Lockey_vpn",
-		
+		"https://t.me/persianvpnhub",
+		"https://t.me/NetMeli8",
 
 	}
 
